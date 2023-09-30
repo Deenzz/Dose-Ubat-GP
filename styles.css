@@ -11,7 +11,7 @@ body, html {
     max-width: 500px;
     background-color: #ffffff; /* Use a white background */
     border-radius: 10px;
-    padding: 20px;
+    padding: 50px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slightly larger shadow */
 }
@@ -29,7 +29,7 @@ label, input, select, button {
 }
 
 /* Style form elements on focus */
-label, input, select, button:focus {
+label[for="weight"], input[type="number"], select, button:focus {
     outline: none;
     border-color: #007bff; /* Highlight border color on focus */
 }
@@ -58,4 +58,22 @@ button:hover {
 
 .hidden {
     display: none;
+}
+
+/* Center the label and input horizontally */
+label[for="weight"], input[type="number"] {
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Adjust label alignment for smaller screens */
+@media (max-width: 500px) {
+    label[for="weight"] {
+        text-align: left; /* Align left for small screens */
+    }
+}
+
+/* Add a rule for the small-font class */
+.small-font {
+    font-size: 12px; /* Adjust the font size to your preference */
 }
