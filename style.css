@@ -1,45 +1,59 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+/* Reset default margin and padding */
+body, html {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-family: "Meiryo", "Hiragino Kaku Gothic ProN", "MS PGothic", sans-serif;
 }
 
+/* Center the container */
 .container {
-    background-color: #fff;
+    margin: 0 auto;
+    max-width: 500px;
+    background-color: #ffffff; /* Use a white background */
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slightly larger shadow */
 }
 
-label {
-    font-weight: bold;
-}
-
-input {
+/* Style form elements */
+label, input, select, button {
+    display: block;
+    margin-bottom: 20px; /* Increased spacing between elements */
     width: 100%;
-    padding: 8px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 12px; /* Slightly larger padding */
+    border: 1px solid #e0e0e0; /* Softer border color */
+    border-radius: 8px; /* Slightly rounded corners */
+    font-size: 18px; /* Larger font size */
+    transition: border-color 0.3s ease-in-out; /* Smooth transition for border color */
+}
+
+/* Style form elements on focus */
+label, input, select, button:focus {
+    outline: none;
+    border-color: #007bff; /* Highlight border color on focus */
 }
 
 button {
-    padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease-in-out; /* Smooth transition for background color */
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Darker background color on hover */
+}
+
+/* Style the result and error messages */
+#result, #error {
+    margin-top: 30px; /* Increased spacing from the top */
+    padding: 20px; /* Larger padding for messages */
+    border-radius: 8px;
+    background-color: #f7f7f7; /* Light gray background for messages */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
 }
 
 .hidden {
