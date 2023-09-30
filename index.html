@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medication Dose Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Medication Dose Calculator</h1>
+        <label for="weight">Enter Patient Weight (in kilograms):</label>
+        <input type="number" id="weight" placeholder="Weight in kilograms">
+        <button id="calculateButton">Calculate</button>
+        <div id="result" class="hidden">
+            <h2>Number of doses for each medication:</h2>
+            <p id="bromhexineDose">Bromhexine: <span></span> ml</p>
+            <p id="azithromycinDose">Azithromycin: <span></span> ml</p>
+            <p id="piritonDose">Piriton: <span></span> ml</p>
+        </div>
+        <div id="error" class="hidden">
+            <p id="errorMessage"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
