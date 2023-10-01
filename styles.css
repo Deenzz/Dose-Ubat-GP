@@ -9,7 +9,7 @@ body, html {
 .container {
     margin: 0 auto;
     max-width: 500px;
-    background-color: #ffffff; /* Use a white background */
+    background-color: #f5f5f5; /* Light gray background for a modern look */
     border-radius: 10px;
     padding: 50px;
     text-align: center;
@@ -21,10 +21,10 @@ label, input, select, button {
     display: block;
     margin-bottom: 20px; /* Increased spacing between elements */
     width: 100%;
-    padding: 12px; /* Slightly larger padding */
+    padding: 10px; /* Slightly larger padding */
     border: 1px solid #e0e0e0; /* Softer border color */
     border-radius: 8px; /* Slightly rounded corners */
-    font-size: 18px; /* Larger font size */
+    font-size: 16px; /* Larger font size */
     transition: border-color 0.3s ease-in-out; /* Smooth transition for border color */
 }
 
@@ -46,14 +46,24 @@ button:hover {
     background-color: #0056b3; /* Darker background color on hover */
 }
 
-/* Style the result and error messages */
+/* Update the styling for the result and error messages */
 #result, #error {
     margin-top: 30px; /* Increased spacing from the top */
     padding: 20px; /* Larger padding for messages */
     border-radius: 8px;
-    background-color: #f7f7f7; /* Light gray background for messages */
+    background-color: #ffffff; /* White background for messages */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     font-size: 16px;
+    text-align: left; /* Align text to the left */
+}
+
+/* Bold the dosage result number */
+#result span {
+    font-weight: bold;
+    background-color: #007bff; /* Blue background color for the number box */
+    color: #fff; /* White text color */
+    padding: 4px 8px; /* Adjust padding as needed */
+    border-radius: 4px; /* Rounded corners for the box */
 }
 
 .hidden {
