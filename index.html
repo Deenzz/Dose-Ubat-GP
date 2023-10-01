@@ -3,26 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medication Dose Calculator</title>
+    <title>Drug Dosage Calculator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>GP Medication Dose Calculator</h1>
+        <h1>Drug Dosage Calculator</h1>
         <label for="weight">Enter Patient Weight (in kilograms):</label>
         <input type="number" id="weight" placeholder="Weight in kilograms">
         <button id="calculateButton">Calculate</button>
         <div id="result" class="hidden">
-            <h2>Number of doses for each medication:</h2>
-            <p id="bromhexineDose">Bromhexine: <span></span> ml TDS</p>
-            <p id="azithromycinDose">Azithromycin: <span></span> ml OD</p>
-            <p id="piritonDose">Piriton: <span></span> ml TDS</p>
-            <p id="augmentinDose">Augmentin: <span></span> ml BD</p>
-            <p id="amoxicillinDose">Amoxicillin: <span></span> ml TDS</p>
-            <p id="cefuroximeDose">Cefuroxime: <span></span> ml BD</p>
-            <p id="paracetamolDose">Paracetamol: <span></span> ml QID</p>
-            <p id="prednisoloneDose">Prednisolone: <span></span> ml OD</p>
-            <p id="domperidoneDose">Domperidone: <span></span> ml TDS</p>
+            <h2>Medication Doses and Notes:</h2>
+            <ul id="medicationDoses"></ul>
         </div>
         <div id="error" class="hidden">
             <p id="errorMessage"></p>
@@ -34,8 +26,10 @@
                 Made in 🇲🇾
                 <br>
                 Disclaimer: Healthcare Professionals Only
-            </p>
-        </div>
+<br>
+                Reference: Drug Doses 17th edition, Frank Shann
+          </p>
+      </div>
     </div>
     <script src="script.js"></script>
 </body>
