@@ -53,7 +53,7 @@ button:hover {
     border-radius: 8px;
     background-color: #ffffff; /* White background for messages */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-size: 16px;
+    font-size: 14px;
     text-align: left; /* Align text to the left */
 }
 
@@ -85,5 +85,5 @@ label[for="weight"], input[type="number"] {
 
 /* Add a rule for the small-font class */
 .small-font {
-    font-size: 12px; /* Adjust the font size to your preference */
+    font-size: 10px; /* Adjust the font size to your preference */
 }
