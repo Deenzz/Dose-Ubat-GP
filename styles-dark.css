@@ -1,69 +1,38 @@
-/* Reset default margin and padding */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: "Meiryo", "Hiragino Kaku Gothic ProN", "MS PGothic", sans-serif;
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #000; /* Set the background color to black */
+    color: #fff; /* Set the text color to white */
 }
 
-/* Center the container */
-.container {
-    margin: 0 auto;
-    max-width: 500px;
-    background-color: #000; /* Dark background for a modern look */
-    border-radius: 10px;
-    padding: 50px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slightly larger shadow */
+/* Form elements in dark mode */
+body.dark-mode label,
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode button {
+    background-color: #000; /* Set the background color to black */
+    color: #fff; /* Set the text color to white */
 }
 
-/* Style form elements */
-label, input, select, button {
-    display: block;
-    margin-bottom: 20px; /* Increased spacing between elements */
-    width: 100%;
-    padding: 10px; /* Slightly larger padding */
-    border: 1px solid #fff; /* White border color */
-    border-radius: 8px; /* Slightly rounded corners */
-    font-size: 16px; /* Larger font size */
-    transition: border-color 0.3s ease-in-out; /* Smooth transition for border color */
-    color: #fff; /* White text color */
-    background-color: #000; /* Dark background color */
+/* Container background color in dark mode */
+body.dark-mode .container {
+    background-color: #000; /* Set the background color of the container to black */
 }
 
-/* Style form elements on focus */
-label[for="weight"], input[type="number"], select, button:focus {
-    outline: none;
-    border-color: #007bff; /* Highlight border color on focus */
+/* Result and error box background color in dark mode */
+body.dark-mode #result,
+body.dark-mode #error {
+    background-color: #000; /* Set the background color of result and error boxes to black */
 }
 
-button {
+/* Button styles */
+#toggleDarkMode {
     background-color: #007bff;
     color: #fff;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out; /* Smooth transition for background color */
+    transition: background-color 0.3s ease-in-out;
 }
 
-button:hover {
-    background-color: #0056b3; /* Darker background color on hover */
+#toggleDarkMode:hover {
+    background-color: #0056b3;
 }
-
-/* Update the styling for the result and error messages */
-#result, #error {
-    margin-top: 30px; /* Increased spacing from the top */
-    padding: 20px; /* Larger padding for messages */
-    border-radius: 8px;
-    background-color: #000; /* Dark background color for messages */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-size: 14px;
-    text-align: left; /* Align text to the left */
-    color: #fff; /* White text color */
-}
-
-/* Bold the dosage result number */
-#result span {
-    font-weight: bold;
-    background-color: #007bff; /* Blue background color for the number box */
-    color: #fff; /* White text color */
-    padding: 4px 8px; /* Adjust padding as needed */
-    border-radius: 4px; /* Rounded corners for the box
