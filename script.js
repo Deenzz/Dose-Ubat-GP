@@ -8,6 +8,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const toggleDarkModeButton = document.getElementById("toggleDarkMode");
     const themeStylesheet = document.getElementById("themeStylesheet");
 
+    // Function to toggle dark mode
+    function toggleDarkMode() {
+        // Toggle dark mode styles by toggling the "dark-mode" class on the body
+        document.body.classList.toggle("dark-mode");
+
+        // Toggle the theme stylesheet link
+        if (themeStylesheet.getAttribute("href") === "styles.css") {
+            themeStylesheet.setAttribute("href", "styles-dark.css");
+        } else {
+            themeStylesheet.setAttribute("href", "styles.css");
+        }
+    }
+
+    // Event listener for the dark mode button
+    toggleDarkModeButton.addEventListener("click", toggleDarkMode);
 
     calculateButton.addEventListener("click", function () {
         // Clear previous results and errors
@@ -24,20 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
             } catch (error) {
                 displayError(error.message);
             }
-        }
-    });
-
-
-
-    toggleDarkModeButton.addEventListener("click", function () {
-        // Toggle dark mode styles by toggling the "dark-mode" class
-        document.body.classList.toggle("dark-mode");
-
-        // Toggle the theme stylesheet link
-        if (themeStylesheet.getAttribute("href") === "styles.css") {
-            themeStylesheet.setAttribute("href", "styles-dark.css");
-        } else {
-            themeStylesheet.setAttribute("href", "styles.css");
         }
     });
 
