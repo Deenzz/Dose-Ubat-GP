@@ -1,3 +1,95 @@
+/* Reset default margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Meiryo", "Hiragino Kaku Gothic ProN", "MS PGothic", sans-serif;
+}
+
+/* Center the container */
+.container {
+    margin: 0 auto;
+    max-width: 500px;
+    border-radius: 10px;
+    padding: 50px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slightly larger shadow */
+}
+
+/* Style form elements */
+label, input, select, button {
+    display: block;
+    margin-bottom: 20px; /* Increased spacing between elements */
+    width: 100%;
+    padding: 10px; /* Slightly larger padding */
+    border: 1px solid #fff; /* White border color */
+    border-radius: 8px; /* Slightly rounded corners */
+    font-size: 16px; /* Larger font size */
+    transition: border-color 0.3s ease-in-out; /* Smooth transition for border color */
+    background-color: #000; /* Dark background color */
+    color: #fff; /* White text color */
+}
+
+/* Style form elements on focus */
+label[for="weight"], input[type="number"], select, button:focus {
+    outline: none;
+    border-color: #007bff; /* Highlight border color on focus */
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; /* Smooth transition for background color */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+}
+
+/* Update the styling for the result and error messages */
+#result, #error {
+    margin-top: 30px; /* Increased spacing from the top */
+    padding: 20px; /* Larger padding for messages */
+    border-radius: 8px;
+    background-color: #000; /* Dark background color for messages */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    text-align: left; /* Align text to the left */
+    color: #fff; /* White text color */
+}
+
+/* Bold the dosage result number */
+#result span {
+    font-weight: bold;
+    background-color: #007bff; /* Blue background color for the number box */
+    color: #fff; /* White text color */
+    padding: 4px 8px; /* Adjust padding as needed */
+    border-radius: 4px; /* Rounded corners for the box */
+}
+
+.hidden {
+    display: none;
+}
+
+/* Center the label and input horizontally */
+label[for="weight"], input[type="number"] {
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Adjust label alignment for smaller screens */
+@media (max-width: 500px) {
+    label[for="weight"] {
+        text-align: left; /* Align left for small screens */
+    }
+}
+
+/* Add a rule for the small-font class */
+.small-font {
+    font-size: 10px; /* Adjust the font size to your preference */
+}
+
 /* Dark mode styles */
 body.dark-mode {
     background-color: #000; /* Set the background color to black */
@@ -24,15 +116,12 @@ body.dark-mode #error {
     background-color: #000; /* Set the background color of result and error boxes to black */
 }
 
-/* Button styles */
-#toggleDarkMode {
+/* Button styles in dark mode */
+body.dark-mode button {
     background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
 }
 
-#toggleDarkMode:hover {
+/* Button hover styles in dark mode */
+body.dark-mode button:hover {
     background-color: #0056b3;
 }
