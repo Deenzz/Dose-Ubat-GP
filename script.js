@@ -42,8 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-
-
     function calculateDoses(weight) {
         const medicationData = [
               { name: "Paracetamol", dose: (weight * 5 * 15) / 250, note: "15mg/kg using 250mg/5ml per bottle; use max QID" },
@@ -95,4 +93,3 @@ document.addEventListener("DOMContentLoaded", function () {
         errorDiv.classList.add("hidden");
     }
 });
-
