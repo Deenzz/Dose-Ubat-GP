@@ -87,3 +87,42 @@ label[for="weight"], input[type="number"] {
 .small-font {
     font-size: 10px; /* Adjust the font size to your preference */
 }
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #000; /* Set the background color to black */
+    color: #fff; /* Set the text color to white */
+}
+
+/* Form elements in dark mode */
+body.dark-mode label,
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode button {
+    background-color: #000; /* Set the background color to black */
+    color: #fff; /* Set the text color to white */
+}
+
+/* Container background color in dark mode */
+body.dark-mode .container {
+    background-color: #000; /* Set the background color of the container to black */
+}
+
+/* Result and error box background color in dark mode */
+body.dark-mode #result,
+body.dark-mode #error {
+    background-color: #000; /* Set the background color of result and error boxes to black */
+}
+
+/* Button styles */
+#toggleDarkMode {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#toggleDarkMode:hover {
+    background-color: #0056b3;
+}
