@@ -94,3 +94,4 @@ document.addEventListener("DOMContentLoaded", function () {
         errorDiv.classList.add("hidden");
     }
 });
+
