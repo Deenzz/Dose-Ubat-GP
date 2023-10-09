@@ -70,16 +70,23 @@ document.addEventListener("DOMContentLoaded", function () {
         return medicationData;
     }
 
-    function displayDosesAndNotes(dosesAndNotes) {
-        dosesAndNotes.forEach((medication) => {
-            const listItem = document.createElement("li");
-            listItem.textContent = `${medication.name}: ${medication.dose.toFixed(2)} ml - Note: ${medication.note}`;
-            medicationDosesList.appendChild(listItem);
-        });
+function displayDosesAndNotes(dosesAndNotes) {
+    dosesAndNotes.forEach((medication) => {
+        const listItem = document.createElement("li");
 
-        resultDiv.classList.remove("hidden");
-    }
+        // Create a <strong> element for the medication name
+        const nameElement = document.createElement("strong");
+        nameElement.textContent = medication.name;
+        listItem.appendChild(nameElement);
 
+        // Add the calculated dose and note
+        listItem.innerHTML += `: <strong>${medication.dose.toFixed(2)} ml</strong> - Note: ${medication.note}`;
+
+        medicationDosesList.appendChild(listItem);
+    });
+
+    resultDiv.classList.remove("hidden");
+}
     function displayError(message) {
         errorMessage.textContent = message;
         errorDiv.classList.remove("hidden");
