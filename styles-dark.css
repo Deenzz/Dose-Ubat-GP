@@ -28,6 +28,7 @@ label, input, select, button {
     font-size: 16px; /* Larger font size */
     transition: border-color 0.3s ease-in-out; /* Smooth transition for border color */
     color: #fff; /* White text color */
+    background-color: #000; /* Set the background color to black */
 }
 
 /* Style form elements on focus */
