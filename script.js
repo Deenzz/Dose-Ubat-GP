@@ -24,6 +24,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // Event listener for the dark mode button
     toggleDarkModeButton.addEventListener("click", toggleDarkMode);
 
+        // Disable the context menu
+    document.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+    });
+
+
     calculateButton.addEventListener("click", function () {
         // Clear previous results and errors
         clearResults();
